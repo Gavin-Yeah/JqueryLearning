@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="Animation.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>hello</p>
+<!--<button id="hide">hide</button>-->
+<!--<button id="show">show</button>-->
+<!--<button id="toggle">show/hide</button>-->
+
+<script type="text/javascript">
+    for(var i =0; i<5; i++){
+        $("<div>").appendTo(document.body);
+    }
+    $("div").click(function () {
+        $(this).hide(1000,function () {
+            $(this).remove();
+        })
+    })
+</script>
+</body>
+</html>
